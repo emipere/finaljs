@@ -24,6 +24,29 @@ function renderCarrito(cartItems) {
          total += articulo.articulo.precio * parseInt(articulo.cantidad)
     });
 
+    let exit = document.getElementById ("exit")
+        const fin = document.createElement ("div")
+        fin.className = 'card mt-2'
+        if (total >0) {
+        fin.innerHTML = `<div>
+                            <button class="btn btn-danger btn-vaciarCarro">Vaciar Carro</button>
+                            </div>`
+                            // no se como vaciar y a que cosa referenciarla
+        cartContaainer.appendChild(fin) 
+        };
+
+        let pagar = document.getElementById ("pagar")
+        if (total >0){
+        const remito = document.createElement ("div")
+        remito.className = 'card mt-2'
+        remito.innerHTML = `<div>
+                            <button class="btn btn-primary"> Emitir Orden de Pago </button>
+                            </div>`
+
+         cartContaainer.appendChild(remito)  
+        };
+
+
     const totalcontainer = document.createElement ("div")
     totalcontainer.innerHTML = `<h3>Total $${total}</h3>`;
     cartContaainer.appendChild(totalcontainer)  
@@ -81,6 +104,20 @@ function configButtons(cartItems) {
                 cartItems.splice(idx, 1);
                 localStorage.setItem("fichaArticulo", JSON.stringify(cartItems))
                 renderCarrito(cartsotarge)
+                Toastify({
+                    text: "El Producto fue eliminado del carrito Exitosamente!",
+                    duration: 1500,
+                    destination: "",
+                    newWindow: false,
+                    close: false,
+                    gravity: "top", 
+                    position: "center", 
+                    stopOnFocus: true, 
+                    style: {
+                      background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    },
+                    onClick: function(){}
+                  }).showToast();
             }
         }
 
