@@ -89,3 +89,18 @@ function configButtons(cartItems) {
 }
 
 renderCarrito(cartsotarge)
+
+// NO SUPE APLICARLE LIBRERIA AL BOTON VACIAR  Y AL BOTON EMITIR PAGO NO VACIAR EL CARRO
+
+// let vaciarCarro = document.querySelectorAll('.btn-vaciarCarro');
+
+// button.onclick = (vaciarCarro) => {
+//     Swal.fire({
+//         title: "The Internet?",
+//         text: "That thing is still around?",
+//         icon: "question"
+//       })
+//     }
+
+
+// vaciarCarro ()
