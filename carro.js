@@ -155,10 +155,7 @@ vaciarCarro.forEach(button => {
     }
   })
   
-  
-
-
-emitirOrdenDePago.forEach(button => {
+  emitirOrdenDePago.forEach(button => {
     button.onclick = async () => {
 
         const { value: email } = await Swal.fire({
@@ -169,6 +166,9 @@ emitirOrdenDePago.forEach(button => {
           });
           if (email) {
             Swal.fire(`Por favor dirijase al Centro de Pagos con la orden que le fue enviada al correo : ${email}`);
+            cartsotarge = []; 
+            localStorage.setItem("fichaArticulo", JSON.stringify(cartsotarge));
+            renderCarrito(cartsotarge); 
           }
 }
 })
