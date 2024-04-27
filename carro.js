@@ -150,7 +150,7 @@ vaciarCarro.forEach(button => {
         cartsotarge = []; 
         localStorage.setItem("fichaArticulo", JSON.stringify(cartsotarge));
         renderCarrito(cartsotarge); 
-        Swal.fire('Carrito Vaciado!', '', 'success'); 
+        Swal.fire('Carrito Vacio!', '', 'success'); 
       }
     }
   })
