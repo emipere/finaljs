@@ -162,13 +162,13 @@ emitirOrdenDePago.forEach(button => {
     button.onclick = async () => {
 
         const { value: email } = await Swal.fire({
-            title: "Gracias por su compra. " + "Le enviaremos la orden para su posterior pago.",
+            title: "Gracias por su compra! " + " \nLe enviaremos la orden para proceder al pago.",
             input: "email",
             inputLabel: "Por favor complete su mail en el siguiente recuadro",
             inputPlaceholder: "...........@.............."
           });
           if (email) {
-            Swal.fire(`Por favor dirijase al Centro de Pagos con la orden que la fue enviada al correo : ${email}`);
+            Swal.fire(`Por favor dirijase al Centro de Pagos con la orden que le fue enviada al correo : ${email}`);
           }
 }
 })
