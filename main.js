@@ -179,7 +179,7 @@ function botonAgregarAlCarro () {
   }
 
 
-// contador
+
 
 let cantidad = document.querySelectorAll(".cantidad")
 let aumentar = document.querySelectorAll(".boton-aumentar")

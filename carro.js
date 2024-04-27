@@ -165,7 +165,7 @@ emitirOrdenDePago.forEach(button => {
             title: "Gracias por su compra. " + "Le enviaremos la orden para su posterior pago.",
             input: "email",
             inputLabel: "Por favor complete su mail en el siguiente recuadro",
-            inputPlaceholder: "Enter your email address"
+            inputPlaceholder: "...........@.............."
           });
           if (email) {
             Swal.fire(`Por favor dirijase al Centro de Pagos con la orden que la fue enviada al correo : ${email}`);
